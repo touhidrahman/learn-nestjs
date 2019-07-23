@@ -1,11 +1,11 @@
 import { Module } from '@nestjs/common';
 import { TasksModule } from './tasks/tasks.module';
-import { TypeOrmModule } from '@nestjs/typeorm';
-import { typeOrmConfig } from './config/typeorm.config';
+import { MongooseModule } from "@nestjs/mongoose";
+import { mongooseDbUri } from './config/mongoose.config';
 
 @Module({
   imports: [
-    TypeOrmModule.forRoot(typeOrmConfig),
+    MongooseModule.forRoot(mongooseDbUri),
     TasksModule
   ],
 })

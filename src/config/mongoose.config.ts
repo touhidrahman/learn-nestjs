@@ -1,0 +1,1 @@
+export const mongooseDbUri = 'mongodb://localhost:27017/learnnestjs';
